@@ -1,0 +1,63 @@
+/* Layout wrapper */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #0e0e10;
+  color: white;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  background: #1a1a1d;
+  padding: 30px 20px;
+  border-right: 1px solid #2a2a2d;
+}
+
+.admin-logo {
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Sidebar links */
+.admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.admin-sidebar a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.admin-sidebar a.active {
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+.admin-sidebar a:hover {
+  color: #ffffff;
+}
+
+/* Content area */
+.admin-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top header */
+.admin-header {
+  padding: 20px 40px;
+  border-bottom: 1px solid #2a2a2d;
+  background: #121214;
+}
+
+/* Page content */
+.admin-page {
+  padding: 40px;
+}

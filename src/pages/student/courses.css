@@ -1,0 +1,283 @@
+/* ================= COURSE WRAPPER ================= */
+
+.course-wrapper{
+display:flex;
+min-height:100vh;
+background:#0e0e10;
+color:white;
+font-family:Inter,sans-serif;
+}
+
+/* ================= SIDEBAR ================= */
+
+.course-sidebar{
+width:280px;
+padding:40px 25px;
+border-right:1px solid rgba(255,255,255,0.05);
+background:rgba(20,20,22,0.6);
+backdrop-filter:blur(10px);
+}
+
+.module-block{
+margin-bottom:25px;
+}
+
+.module-block h4{
+cursor:pointer;
+padding:12px 14px;
+border-radius:10px;
+font-size:14px;
+color:#aaa;
+transition:.3s ease;
+}
+
+.module-block h4:hover{
+background:rgba(108,99,255,0.08);
+color:#6c63ff;
+}
+
+.active-module{
+background:rgba(108,99,255,0.12);
+color:#6c63ff!important;
+}
+
+.module-block ul{
+margin-top:10px;
+padding-left:10px;
+}
+
+.module-block li{
+font-size:13px;
+margin-bottom:8px;
+padding:8px 10px;
+border-radius:8px;
+cursor:pointer;
+color:#888;
+transition:.2s ease;
+}
+
+.module-block li:hover{
+background:rgba(255,255,255,0.05);
+color:white;
+}
+
+.active-topic{
+background:linear-gradient(90deg,#6c63ff,#574fd6);
+color:white!important;
+}
+
+/* ================= CONTENT ================= */
+
+.course-content{
+flex:1;
+padding:60px 80px;
+}
+
+/* ================= GLOBAL PROGRESS TRACKER ================= */
+
+.topic-progress{
+display:flex;
+align-items:center;
+margin-bottom:50px;
+flex-wrap:wrap;
+}
+
+.progress-step{
+display:flex;
+align-items:center;
+cursor:pointer;
+}
+
+.progress-circle{
+width:26px;
+height:26px;
+border-radius:50%;
+border:2px solid #888;
+background:transparent;
+transition:all .35s ease;
+}
+
+.progress-circle.active{
+background:linear-gradient(135deg,#3bd16f,#00ffa6);
+border-color:#3bd16f;
+box-shadow:0 0 10px rgba(0,255,166,.6);
+}
+
+.progress-line{
+width:140px;
+height:3px;
+background:#333;
+transition:all .35s ease;
+}
+
+.progress-line.active{
+background:linear-gradient(90deg,#3bd16f,#00ffa6);
+}
+
+/* ================= DESCRIPTION BOX ================= */
+
+.description-box{
+background:#141416;
+border-radius:16px;
+padding:30px;
+border:1px solid #2a2a2d;
+max-width:720px;
+}
+
+.description-box h2{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.description-box p{
+color:#aaa;
+line-height:1.6;
+}
+
+/* ================= MATERIALS ================= */
+
+.materials-section{
+margin-top:20px;
+}
+
+.materials-section h3{
+margin-bottom:20px;
+}
+
+.material-card{
+background:#141416;
+padding:20px;
+border-radius:14px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border:1px solid #2a2a2d;
+transition:.3s ease;
+}
+
+.material-card:hover{
+transform:translateY(-3px);
+border-color:#6c63ff;
+box-shadow:0 10px 25px rgba(108,99,255,0.15);
+}
+
+.material-type{
+padding:4px 10px;
+border-radius:6px;
+font-size:11px;
+font-weight:600;
+}
+
+.material-type.video{
+background:rgba(108,99,255,0.2);
+color:#6c63ff;
+}
+
+.material-type.article{
+background:rgba(255,255,255,0.08);
+color:#ccc;
+}
+
+.material-card a{
+color:#6c63ff;
+font-size:13px;
+text-decoration:none;
+margin-left:10px;
+}
+
+.material-card a:hover{
+text-decoration:underline;
+}
+
+/* ================= CHECKLIST ================= */
+
+.checklist-section{
+margin-top:30px;
+}
+
+.checklist-section h3{
+margin-bottom:15px;
+}
+
+.interactive-checklist{
+list-style:none;
+padding:0;
+}
+
+.check-item{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:12px;
+font-size:14px;
+}
+
+.check-item input{
+width:18px;
+height:18px;
+cursor:pointer;
+}
+
+.check-item span.checked{
+text-decoration:line-through;
+color:#3bd16f;
+}
+
+/* ================= BUTTON ================= */
+
+.continue-btn{
+margin-top:25px;
+padding:12px 24px;
+background:#3bd16f;
+border:none;
+border-radius:8px;
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:.25s ease;
+}
+
+.continue-btn:hover{
+background:#2bb65e;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:1000px){
+
+.course-wrapper{
+flex-direction:column;
+}
+
+.course-sidebar{
+width:100%;
+border-right:none;
+border-bottom:1px solid #2a2a2d;
+}
+
+.course-content{
+padding:40px;
+}
+
+.progress-line{
+width:90px;
+}
+
+}
+
+@media (max-width:600px){
+
+.course-content{
+padding:30px 20px;
+}
+
+.description-box h2{
+font-size:22px;
+}
+
+.progress-line{
+width:60px;
+}
+
+}

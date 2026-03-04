@@ -1,0 +1,131 @@
+/* ================= PROGRESS PAGE ================= */
+
+.progress-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  animation: fadeUp 0.5s ease;
+}
+
+.progress-page h2 {
+  font-size: 26px;
+  margin-bottom: 30px; /* reduced slightly */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* ================= EMPTY STATE MESSAGE ================= */
+
+.no-progress {
+  margin-bottom: 40px;   /* 🔥 THIS pushes cards down properly */
+  color: #aaa;
+  font-size: 15px;
+}
+
+
+/* ================= SKILL CARD ================= */
+
+.skill-card {
+  margin-bottom: 30px;
+  padding: 28px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.01)
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(108, 99, 255, 0.15);
+}
+
+
+/* ================= HEADER ================= */
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #ccc;
+}
+
+.skill-header span:last-child {
+  font-weight: 600;
+  color: #6c63ff;
+}
+
+
+/* ================= PROGRESS BAR ================= */
+
+.progress-bar {
+  height: 12px;
+  background: #1a1a1d;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Shimmer only when empty */
+
+.progress-bar.empty::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(108, 99, 255, 0.08),
+    transparent
+  );
+  animation: shimmer 2s infinite linear;
+  opacity: 0.4;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6c63ff, #8f7bff);
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .progress-page {
+    padding: 40px 15px;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+
+  .skill-header {
+    font-size: 14px;
+  }
+}
